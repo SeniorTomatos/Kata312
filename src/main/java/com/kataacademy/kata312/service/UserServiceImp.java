@@ -19,7 +19,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional
-    public void addUser(User user) {
+    public void saveUser(User user) {
         repository.save(user);
     }
 
@@ -38,11 +38,5 @@ public class UserServiceImp implements UserService {
     @Transactional
     public void deleteUser(long id) {
         repository.deleteById(id);
-    }
-
-    @Override
-    @Transactional
-    public void editUser(User user) {
-        repository.save(user);
     }
 }
